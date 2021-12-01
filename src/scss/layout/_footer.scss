@@ -1,0 +1,13 @@
+.footer {
+  background-color: white;
+  @include columnCentered;
+  &__text {
+    @include formtext;
+    color: #6b6b6b;
+    opacity: 0.5;
+  }
+  &__link-photo {
+    width: 103px;
+    height: 40px;
+  }
+}
