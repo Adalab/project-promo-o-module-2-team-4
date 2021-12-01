@@ -1,20 +1,26 @@
 @mixin formtext() {
-    font-size: 14px;
-    font-family: "Open Sans", sans-serif;
-    line-height: 20px;
-    color: $darkgreen;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  line-height: 20px;
+  color: $darkgreen;
+}
+
+@mixin landingMainText() {
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  color: $icon;
+}
+
+@mixin columnCentered() {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+@mixin tablet {
+  @media (min-width: 768px) {
+    @content;
   }
-  
-  @mixin landingMainText () {
-      font-size: 13px;
-      font-family: "Open Sans", sans-serif;
-      text-align: center;
-      color: $darkgreen;
-  }
-  
-  @mixin columnCentered () {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-  }
+}
