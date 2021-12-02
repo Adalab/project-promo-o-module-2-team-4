@@ -1,61 +1,53 @@
 .form {
-  margin: 25px 20px 30px;
+	margin: 25px 20px 30px;
 
-<<<<<<< HEAD
 	//ojo que en TABLET estamos dando margen al fieldset; pensamos que quizás podría dársele al formulario competo que incluye los tres fielsets. También 15 px a la derecha, pensando en poner 15 a la izquierda en el fieldset de Preview.
-
 	@include tablet {
 		margin: 25px 15px 30px 40px;
 	}
-=======
-  //ojo que en TABLET estamos dando margen al fieldset; pensamos que quizás podría dársele al formulario competo que incluye los tres fielsets. También 15 px a la derecha, pensando en poner 15 a la izquierda en el fieldset de Preview.
-  @include tablet {
-    margin: 25px 15px 30px 40px;
-  }
->>>>>>> 736a4aa1cad3b48014a53f089e9285910b70fa5e
 
-  &__label {
-    display: block;
-    @include formtext;
-    margin-bottom: 7px;
+	&__label {
+		display: block;
+		@include formtext;
+		margin-bottom: 7px;
 
-    &--input {
-      border: 1px solid $input;
-      padding: 3px 0px 7px 10px;
-      height: 30px;
-      width: 330px;
-      margin-bottom: 20px;
+		&--input {
+			border: 1px solid $input;
+			padding: 3px 0px 7px 10px;
+			height: 30px;
+			width: 330px;
+			margin-bottom: 20px;
 
-      &:last-child {
-        margin-bottom: 0;
-      }
+			&:last-child {
+				margin-bottom: 0;
+			}
 
-      &::placeholder {
-        @include placeHolder;
-      }
-    }
-    &--wrapper {
-      display: flex;
-      justify-content: flex-start;
-      margin-bottom: 20px;
+			&::placeholder {
+				@include placeHolder;
+			}
+		}
+		&--wrapper {
+			display: flex;
+			justify-content: flex-start;
+			margin-bottom: 20px;
 
-      & .button {
-        height: 30px;
-        width: 140px;
-        background-color: $orange;
-        @include formtext;
-        color: #ffffff;
-        text-align: center;
-        padding: 3px 22px 7px;
-        border-radius: 3px;
-        //box-shadow: black blur(4px); falta blur-box shadow
-      }
-      & .imgPreview {
-        width: 30px;
-        height: 30px;
-        margin-left: 20px;
-        border: solid 1px $input;
-      }
-    }
-  }
+			& .button {
+				height: 30px;
+				width: 140px;
+				background-color: $orange;
+				@include formtext;
+				color: #ffffff;
+				text-align: center;
+				padding: 3px 22px 7px;
+				border-radius: 3px;
+				//box-shadow: black blur(4px); falta blur-box shadow
+			}
+			& .imgPreview {
+				width: 30px;
+				height: 30px;
+				margin-left: 20px;
+				border: solid 1px $input;
+			}
+		}
+	}
 }
