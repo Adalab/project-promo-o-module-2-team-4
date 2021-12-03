@@ -1,18 +1,18 @@
 .legend {
-	display: flex;
-	justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+  width: 75vw;
+  height: 24px;
+  &__iconTitle {
+    display: flex;
+    justify-content: flex-start;
 
-	height: 24px;
-	&__iconTitle {
-		display: flex;
-		justify-content: flex-start;
-
-		&--mainTitle {
-			font-family: $mainfont;
-			font-weight: 600;
-			font-size: 14px;
-			text-transform: uppercase;
-			color: $darkgray;
-		}
-	}
+    &--mainTitle {
+      font-family: $mainfont;
+      font-weight: 600;
+      font-size: 14px;
+      text-transform: uppercase;
+      color: $darkgray;
+    }
+  }
 }
