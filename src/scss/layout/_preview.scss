@@ -4,6 +4,14 @@
   padding-top: 38px;
   padding-bottom: 40px;
   padding-left: 45px;
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 40px 20px 0;
+    border-radius: 6px;
+  }
   &__btn {
     display: block;
     width: 75px;
@@ -19,6 +27,9 @@
     justify-content: space-between;
     padding: 0 12px;
     background: transparent;
+    @include tablet {
+      transform: translateX(-107%);
+    }
   }
   &__article {
     margin-top: 20px;

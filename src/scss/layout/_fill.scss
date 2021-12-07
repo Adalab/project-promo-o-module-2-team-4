@@ -1,10 +1,5 @@
 .form {
   margin-top: 25px;
-  //ojo que en TABLET estamos dando margen al fieldset; pensamos que quizás podría dársele al formulario competo que incluye los tres fielsets. También 15 px a la derecha, pensando en poner 15 a la izquierda en el fieldset de Preview.
-  @include tablet {
-    margin: 25px 15px 30px 40px;
-  }
-
   &__label {
     display: block;
     @include formtext;
