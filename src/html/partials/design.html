@@ -1,7 +1,31 @@
 <fieldset class="fieldset">
-  <include
-    src="./legend.html"
-    icon="far fa-object-ungroup item--icon"
-    title="Diseña"
-  ></include>
+	<include
+		src="./legend.html"
+		icon="far fa-object-ungroup item--icon"
+		title="Diseña"
+	></include>
+
+	<div class="design">
+		<label class="colores">Colores</label>
+		<ul>
+			<li class="color_blue">
+				<input class="radio" type="radio" value="1" id="color_blue" name="palette" />
+				<div class="color_blue--dark"></div>
+				<div class="color_blue--medium"></div>
+				<div class="color_blue--light"></div>
+			</li>
+			<li class="color_red">
+				<input class="radio" type="radio" value="2" id="color_red" name="palette" />
+				<div class="color_red--dark"></div>
+				<div class="color_red--medium"></div>
+				<div class="color_red--light"></div>
+			</li>
+			<li class="color_grey">
+				<input class="radio" type="radio" value="3" id="color_grey" name="palette" />
+				<div class="color_grey--dark"></div>
+				<div class="color_grey--medium"></div>
+				<div class="color_grey--light"></div>
+			</li>
+		</ul>
+	</div>
 </fieldset>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Awesome Profile Cards</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="icon" href="./assets/images/favicon.png" />
+  </head>
+
+  <body class="body">
+    <header class="header">
+      <a
+        href="./index.html"
+        title="Ir a la página de inicio"
+        alt="Ir a la página de inicio"
+      >
+        <img
+          class="header__logo"
+          src="./assets/images/tarjetas-molonas.png"
+          alt="Logo de Awesome Profile Cards"
+          title="Logo de Awesome Profile Cards"
+        />
+      </a>
+    </header>
+
+    <main class="main">
+      <section class="preview">
+        <button class="preview__btn">
+          <i class="far fa-trash-alt"></i>
+          Reset
+        </button>
+        <article class="preview__article">
+          <div class="preview__article--container">
+            <div class="preview__article--rectangle"></div>
+            <h2 class="preview__article--name">Nombre Apellido</h2>
+            <h3 class="preview__article--job">Font-end developer</h3>
+          </div>
+          <div class="preview__article--img"></div>
+          <div class="container">
+            <a href="https://adalab.es/" alt="Ir a móvil" target="_blank">
+              <div class="container-icon">
+                <i class="fas fa-mobile-alt"></i>
+              </div>
+            </a>
+            <a href="https://adalab.es/" alt="Ir a correo electronico" target="_blank">
+              <div class="container-icon">
+                <i class="far fa-envelope"></i>
+              </div>
+            </a>
+            <a
+              href="https://adalab.es/"
+              alt="Ir a la página de Linkedin"
+              target="_blank"
+            >
+              <div class="container-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </div>
+            </a>
+            <a href="https://adalab.es/" alt="Ir a la página de GitHub" target="_blank">
+              <div class="container-icon">
+                <i class="fab fa-github-alt"></i>
+              </div>
+            </a>
+          </div>
+        </article>
+
+      </section>
+      <form class="dashboard">
+        <fieldset class="fieldset">
+          <legend class="legend" style="cursor: pointer" title="Pulsa para desplegar">
+            <div class="legend__iconTitle">
+              <div><i class="far fa-object-ungroup item--icon"></i></div>
+              <h2 class="legend__iconTitle--mainTitle">Diseña</h2>
+            </div>
+            <div><i class="fas fa-chevron-down" style="color: #54585a"></i></div>
+          </legend>
+
+        </fieldset>
+
+
+        <fieldset class="fieldset">
+          <legend class="legend" style="cursor: pointer" title="Pulsa para desplegar">
+            <div class="legend__iconTitle">
+              <div><i class="far fa-keyboard item--icon"></i></div>
+              <h2 class="legend__iconTitle--mainTitle">Rellena</h2>
+            </div>
+            <div><i class="fas fa-chevron-down" style="color: #54585a"></i></div>
+          </legend>
+
+
+          <div class="form">
+            <label class="form__label" for="fullName">Nombre completo</label>
+            <input
+              class="form__label--input"
+              placeholder="Ej:Mari Puri López"
+              type="text"
+              id="fullName"
+              name="fullName"
+            />
+            <label class="form__label" for="position">Puesto</label>
+            <input
+              class="form__label--input"
+              placeholder="Ej:Master and Commander"
+              type="text"
+              id="position"
+              name="position"
+            />
+            <label class="form__label" for="image">Imagen de perfil</label>
+            <div class="form__label--wrapper">
+              <div class="button">Añadir imagen</div>
+              <div class="imgPreview"></div>
+            </div>
+
+            <label class="form__label" for="emailAdress">Email</label>
+            <input
+              class="form__label--input"
+              placeholder="Ej:maripuri@lamaster.com"
+              type="email"
+              id="emailAdress"
+              name="emailAdress"
+            />
+            <label class="form__label" for="phone">Teléfono</label>
+            <input
+              class="form__label--input"
+              placeholder="Ej:+34 611661234"
+              type="text"
+              id="phone"
+              name="phone"
+            />
+            <label class="form__label" for="linkedIn">LinkedIn</label>
+            <input
+              class="form__label--input"
+              placeholder="Ej:linkedin.com/es/lamari.master"
+              type="text"
+              id="linkedIn"
+              name="linkedIn"
+            />
+            <label class="form__label" for="gitHub">Github</label>
+            <input
+              class="form__label--input"
+              placeholder="Ej:@lamari"
+              type="text"
+              id="gitHub"
+              name="gitHub"
+            />
+          </div>
+        </fieldset>
+
+
+        <fieldset class="share fieldset">
+          <legend class="legend" style="cursor: pointer" title="Pulsa para desplegar">
+            <div class="legend__iconTitle">
+              <div><i class="fas fa-share-alt item--icon"></i></div>
+              <h2 class="legend__iconTitle--mainTitle">Comparte</h2>
+            </div>
+            <div><i class="fas fa-chevron-down" style="color: #54585a"></i></div>
+          </legend>
+
+          <button class="share__create_btn">
+            <i class="far fa-address-card"></i>
+            Crear tarjeta
+          </button>
+          <section class="share__result">
+            <p class="share__result--title">La tarjeta ha sido creada:</p>
+            <a href="" class="share__result--link"
+              >https://awesome-profile-card.com?id=A456DF0001</a
+            >
+            <!--Este texto habrá que eliminarlo, es el link generado. Lo pongo para comprobar los estilos-->
+            </a>
+            <a href="https://adalab.es/" class="share__result--btn" target="_blank">
+              <i class="fab fa-twitter"></i>
+              <p>Compartir en twitter</p>
+            </a>
+          </section>
+        </fieldset>
+
+      </form>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__text">Awesome profile-cards @2021</p>
+        <a class="footer__link"  title="logo de adalab" target="_blank"><img class="footer__link-image"src="./assets/images/logo-adalab.png" alt="logo adalab"></a>
+    </footer> 
+
+    <!-- href="https://adalab.es/" 
+    Añadir luego el enlace   -->
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
