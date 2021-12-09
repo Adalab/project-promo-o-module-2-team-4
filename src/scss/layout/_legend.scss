@@ -1,13 +1,17 @@
 .legend {
   display: flex;
   justify-content: space-between;
-  width: 75vw;
+  width: 100%;
   height: 24px;
+  @include tablet {
+    width: 329px;
+  }
   &__iconTitle {
     display: flex;
     justify-content: flex-start;
 
     &--mainTitle {
+      margin-left: 10px;
       font-family: $mainfont;
       font-weight: 600;
       font-size: 14px;
