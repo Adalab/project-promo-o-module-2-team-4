@@ -28,7 +28,7 @@ function getPreviewText() {
 // Funciones que pinta el texto
 
 function renderPreviewText(userName) {
-    namePreview.innerHTML = `<h2>${userName} </h2>`; //test
+    namePreview.innerHTML = userName;
     console.log(userName);
 
 }
