@@ -8,8 +8,6 @@ const mailPreview = document.querySelector(".js-preview__mail");
 const linkedinPreview = document.querySelector(".js-preview__linkedin");
 const githubPreview = document.querySelector(".js-preview__github");
 
-
-
 const nameInput = document.querySelector(".js-form__input--name");
 const jobInput = document.querySelector(".js-form__input--job");
 const mailInput = document.querySelector(".js-form__input--mail");
@@ -20,21 +18,17 @@ const githubInput = document.querySelector(".js-form__input--github");
 //Funciones de recogida de texto
 
 function getPreviewText() {
-    const userName = nameInput.value;
-    return userName;
-
+	const userName = nameInput.value;
+	return userName;
 }
 
 // Funciones que pinta el texto
 
 function renderPreviewText(userName) {
-    namePreview.innerHTML = userName;
-    console.log(userName);
-
+	namePreview.innerHTML = userName;
+	console.log(userName);
 }
-
 
 // Listener
 
 //nameInput.addEventListener("keyup", handlerPreviewText);
-
