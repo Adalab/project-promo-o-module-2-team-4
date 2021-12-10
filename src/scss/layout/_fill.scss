@@ -19,6 +19,10 @@
 			&::placeholder {
 				@include placeHolder;
 			}
+
+			@include tablet {
+				width: 329px;
+			}
 		}
 		&--wrapper {
 			display: flex;
