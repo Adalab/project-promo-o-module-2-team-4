@@ -3,7 +3,7 @@
 
 const namePreview = document.querySelector(".js-preview__name");
 const jobPreview = document.querySelector(".js-preview__job");
-const mobilePreview = document.querySelector(".js-preview__mobile");
+const phonePreview = document.querySelector(".js-preview__phone");
 const mailPreview = document.querySelector(".js-preview__mail");
 const linkedinPreview = document.querySelector(".js-preview__linkedin");
 const githubPreview = document.querySelector(".js-preview__github");
@@ -11,24 +11,23 @@ const githubPreview = document.querySelector(".js-preview__github");
 const nameInput = document.querySelector(".js-form__input--name");
 const jobInput = document.querySelector(".js-form__input--job");
 const mailInput = document.querySelector(".js-form__input--mail");
-const mobileInput = document.querySelector(".js-form__input--mobile");
+const phoneInput = document.querySelector(".js-form__input--phone");
 const linkedinInput = document.querySelector(".js-form__input--linkedin");
 const githubInput = document.querySelector(".js-form__input--github");
 
 //Funciones de recogida de texto
 
-function getPreviewText() {
-	const userName = nameInput.value;
-	return userName;
+const userInfo = {};
+userInfo.name: nameInput,
+userInfo.job: jobInput,
+userInfo.mail: mailInput,
+userInfo.phone: phoneInput,
+userInfo.linkedin: linkedinInput,
+userInfo.github: githubInput,
+
+
+function handleTextInput() {
+	namePreview.innerHTML = nameInput.value;
 }
 
-// Funciones que pinta el texto
-
-function renderPreviewText(userName) {
-	namePreview.innerHTML = userName;
-	console.log(userName);
-}
-
-// Listener
-
-//nameInput.addEventListener("keyup", handlerPreviewText);
+userinfo.addEventListener("keyup", handleTextInput);
