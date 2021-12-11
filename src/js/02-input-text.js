@@ -24,43 +24,40 @@ const githubInput = document.querySelector(".js-form__input--github");
 
 //OBJETO
 // const userInfo = {};
-// userInfo.name = nameInput;
-// userInfo.job = jobInput;
-// userInfo.mail = mailInput;
-// userInfo.phone = phoneInput;
-// userInfo.linkedin = linkedinInput;
-// userInfo.github = githubInput;
+// userInfo.name = nameInput.value
+// userInfo.job = jobInput.value
+// userInfo.mail = mailInput.value
+// userInfo.phone = phoneInput.value
+// userInfo.linkedin = linkedinInput.value
+// userInfo.github = githubInput.value
 
 //Obtenemos el texto del input
 
-function getInputData() {
-	//creamos un objeto con los valores de los input
-	const userInfo = {};
-	userInfo.name = nameInput.value;
-	userInfo.job = jobInput.value;
-	userInfo.mail = mailInput.value;
-	userInfo.phone = phoneInput.value;
-	userInfo.linkedin = linkedinInput.value;
-	userInfo.github = githubInput.value;
 
-	return userInfo;
+
+
+
+
+function getInputData() {
+    const userName = nameInput.value;
+    return userName;
 }
 
 // Lo pintamos en la tarjeta de Preview(HTML)
+let form__label = ""
+function writeNameOnCard(userName) {
+    //if (form__label === '') {
+        
+    }//No sé si es necesario...
 
-function writeDataOnCard(name, job, mail, phone, linkedin, github) {
-	namePreview.innerHTML = name;
-	jobPreview.innerHTML = job;
-	mailPreview.innerHTML = mail;
-	phonePreview.innerHTML = phone;
-	linkedinPreview.innerHTML = linkedin;
-	githubPreview.innerHTML = github;
+    namePreview.innerHTML = userName;
 }
 
 // función que las agrupa
-function generateCard() {
-	const userInfo = getInputData();
-	writeDataOnCard(userInfo);
+function generateCard(event) {
+    //event.preventDefault(); ¿es necesario?
+    const userName = getInputData();
+    writeNameOnCard(userName);
 }
 
 // Escuchamos el evento del teclado
