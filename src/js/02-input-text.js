@@ -16,30 +16,38 @@ const githubInput = document.querySelector(".js-form__input--github");
 
 //OBJETO
 // const userInfo = {};
-// userInfo.name = nameInput;
-// userInfo.job = jobInput;
-// userInfo.mail = mailInput;
-// userInfo.phone = phoneInput;
-// userInfo.linkedin = linkedinInput;
-// userInfo.github = githubInput;
+// userInfo.name = nameInput.value
+// userInfo.job = jobInput.value
+// userInfo.mail = mailInput.value
+// userInfo.phone = phoneInput.value
+// userInfo.linkedin = linkedinInput.value
+// userInfo.github = githubInput.value
 
 //Obtenemos el texto del input
 
+
+
+
+
+
 function getInputData() {
-	const userName = nameInput.value;
-	return userName;
+    const userName = nameInput.value;
+    return userName;
 }
 
 // Lo pintamos en la tarjeta de Preview(HTML)
-
+let form__label = ""
 function writeNameOnCard(userName) {
-	namePreview.innerHTML = userName;
+    //if (form__label === '') {}//No sé si es necesario...
+
+    namePreview.innerHTML = userName;
 }
 
 // función que las agrupa
-function generateCard() {
-	const userName = getInputData();
-	writeNameOnCard(userName);
+function generateCard(event) {
+    //event.preventDefault(); ¿es necesario?
+    const userName = getInputData();
+    writeNameOnCard(userName);
 }
 
 // function handleTextInput() {
