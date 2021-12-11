@@ -1,5 +1,6 @@
-//Constantes
 "use strict";
+
+//Constantes
 const namePreview = document.querySelector(".js-preview__name");
 const jobPreview = document.querySelector(".js-preview__job");
 const phonePreview = document.querySelector(".js-preview__phone");
@@ -14,13 +15,13 @@ const phoneInput = document.querySelector(".js-form__input--phone");
 const linkedinInput = document.querySelector(".js-form__input--linkedin");
 const githubInput = document.querySelector(".js-form__input--github");
 
-// // Obtenemos los valores de los Input
-// const name = nameInput.value;
-// const job = jobInput.value;
-// const mail = mailInput.value;
-// const phone = phoneInput.value;
-// const linkedin = linkedinInput.value;
-// const github = githubInput.value;
+// Creamos las variables globales para almacenar los datos de los input
+const user_name = "";
+const user_job = "";
+const user_mail = "";
+const user_phone = "";
+const user_linkedin = "";
+const user_github = "";
 
 //OBJETO
 // const userInfo = {};
@@ -33,40 +34,34 @@ const githubInput = document.querySelector(".js-form__input--github");
 
 //Obtenemos el texto del input
 
-
-
-
-
-
-function getInputData() {
-    const userName = nameInput.value;
-    return userName;
+function getInputData(user_name) {
+	user_name = nameInput.value;
+	return user_name;
 }
 
 // Lo pintamos en la tarjeta de Preview(HTML)
-let form__label = ""
-function writeNameOnCard(userName) {
-    //if (form__label === '') {
-        
-    }//No sé si es necesario...
-
-    namePreview.innerHTML = userName;
+function updatePreview(user_name) {
+	if (user_name === "") {
+		namePreview.innerHTML = "Nombre Apellidos";
+	} else {
+		namePreview.innerHTML = user_name;
+	}
 }
 
 // función que las agrupa
-function generateCard(event) {
-    //event.preventDefault(); ¿es necesario?
-    const userName = getInputData();
-    writeNameOnCard(userName);
+function handleUserInput(event) {
+	const user_name = getInputData();
+	updatePreview(user_name);
+	//event.preventDefault(); ¿es necesario? yo(Isa) creo que no es necesario, porque aquí no hay nada que tenga definido un comportamiento por defecto. No se pulsa ningñun botón de enviar, no se 'ejecuta' nada; simplemente se 'comparte' texto de un lugar a otro'. Pero lo vemos!
 }
 
 // Escuchamos el evento del teclado
-nameInput.addEventListener("keyup", generateCard);
-jobInput.addEventListener("keyup", generateCard);
-mailInput.addEventListener("keyup", generateCard);
-phoneInput.addEventListener("keyup", generateCard);
-linkedinInput.addEventListener("keyup", generateCard);
-githubInput.addEventListener("keyup", generateCard);
+nameInput.addEventListener("keyup", handleUserInput);
+jobInput.addEventListener("keyup", handleUserInput);
+mailInput.addEventListener("keyup", handleUserInput);
+phoneInput.addEventListener("keyup", handleUserInput);
+linkedinInput.addEventListener("keyup", handleUserInput);
+githubInput.addEventListener("keyup", handleUserInput);
 // FUNCIÓN RÁPIDA PARA RELLENAR FORMULARIO
 //function generateCard() {
 // 	namePreview.innerHTML = nameInput.value;
