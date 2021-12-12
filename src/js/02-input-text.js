@@ -15,25 +15,35 @@ const phoneInput = document.querySelector(".js-form__input--phone");
 const linkedinInput = document.querySelector(".js-form__input--linkedin");
 const githubInput = document.querySelector(".js-form__input--github");
 
-//OBJETO
-// const userInfo = {};
-// userInfo.name = nameInput.value;
-// userInfo.job = jobInput.value;
-// userInfo.mail = mailInput.value;
-// userInfo.phone = phoneInput.value;
-// userInfo.linkedin = linkedinInput.value;
-// userInfo.github = githubInput.value;
+
+// objeto con todos los inputs
+const allInputs = {}
+nameInput.value = "",
+jobInput.value = "",
+mailInput.value = "",
+phoneInput.value = "",
+linkedinInput.value = "",
+githubInput.value = "",
+
+// OBJETO;
+const userInfo = {};
+userInfo.name = nameInput.value;
+userInfo.job = jobInput.value;
+userInfo.mail = mailInput.value;
+userInfo.phone = phoneInput.value;
+userInfo.linkedin = linkedinInput.value;
+userInfo.github = githubInput.value;
 
 //Obtenemos el texto del input
 
-function getInputData() {
+function getInputData(allInputs) {
 	const userInfo = {};
-	userInfo.name = nameInput.value;
-	userInfo.job = jobInput.value;
-	userInfo.mail = mailInput.value;
-	userInfo.phone = phoneInput.value;
-	userInfo.linkedin = linkedinInput.value;
-	userInfo.github = githubInput.value;
+userInfo.name = nameInput.value;
+userInfo.job = jobInput.value;
+userInfo.mail = mailInput.value;
+userInfo.phone = phoneInput.value;
+userInfo.linkedin = linkedinInput.value;
+userInfo.github = githubInput.value;
 	return userInfo;
 }
 
@@ -45,18 +55,17 @@ function updatePreview(userInfo) {
 	// 	jobPreview.innerHTML = "Front-end developer"
 	// 	}
 	// } else {
-		namePreview.innerHTML = userInfo.name;
-		jobPreview.innertHTML = userInfo.job;
-		mailPreview.href = `mailto:${userInfo.mail}`;
-		phonePreview.href = `tel:${userInfo.phone}`;
-		linkedinPreview.href = userInfo.linkedin;
-		githubPreview.href = userInfo.github;
-	}
+	namePreview.innerHTML = userInfo.name;
+	jobPreview.innertHTML = userInfo.job;
+	mailPreview.href = `mailto:${userInfo.mail}`;
+	phonePreview.href = `tel:${userInfo.phone}`;
+	linkedinPreview.href = userInfo.linkedin;
+	githubPreview.href = userInfo.github;
 }
 
 // función que las agrupa
 function handleUserInput(event) {
-	const userInfo = getInputData(userInfo);
+	const userInfo = getInputData();
 	updatePreview(userInfo);
 	//event.preventDefault(); ¿es necesario? yo(Isa) creo que no es necesario, porque aquí no hay nada que tenga definido un comportamiento por defecto. No se pulsa ningún botón de enviar, no se 'ejecuta' nada; simplemente se 'comparte' texto de un lugar a otro'. Pero lo vemos!
 }
