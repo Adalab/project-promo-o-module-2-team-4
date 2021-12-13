@@ -65,7 +65,6 @@ function updatePreview(userInfo) {
 function handleUserInput(event) {
 	const userInfo = getInputData();
 	updatePreview(userInfo);
-	//event.preventDefault(); ¿es necesario? yo(Isa) creo que no es necesario, porque aquí no hay nada que tenga definido un comportamiento por defecto. No se pulsa ningún botón de enviar, no se 'ejecuta' nada; simplemente se 'comparte' texto de un lugar a otro'. Pero lo vemos!
 }
 
 // Escuchamos el evento del teclado
@@ -75,8 +74,3 @@ mailInput.addEventListener("keyup", handleUserInput);
 phoneInput.addEventListener("keyup", handleUserInput);
 linkedinInput.addEventListener("keyup", handleUserInput);
 githubInput.addEventListener("keyup", handleUserInput);
-
-// FUNCIÓN RÁPIDA PARA RELLENAR FORMULARIO
-//function generateCard() {
-// 	namePreview.innerHTML = nameInput.value;
-// // }
