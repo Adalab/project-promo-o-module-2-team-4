@@ -12,8 +12,8 @@
   margin: 95px auto 35px;
   @include tablet {
     width: 420px;
-  height: 100px;
-  margin: 350px auto 35px;
+    height: 100px;
+    margin: 350px auto 35px;
   }
 }
 
@@ -66,8 +66,7 @@
   }
   @include tablet {
     margin: 18px auto 185px;
-
-    }
+  }
 }
 
 .button__landing {
