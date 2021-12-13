@@ -1,14 +1,15 @@
 .body {
 	width: 100%;
-	max-height: 100vh;
 
+	margin-bottom: 110px;
 	@include tablet {
-		margin: 0px 0px 0px 0px;
+		margin-bottom: 60px;
 	}
 }
 
 .main {
 	background: linear-gradient(#f5f5f5, #fff);
+	padding-bottom: 30px;
 	@include tablet {
 		display: flex;
 		flex-direction: row-reverse;
@@ -38,5 +39,5 @@
 }
 
 // .collapse .js_collapsible {
-// 	display: none;
+//   display: none;
 // }
