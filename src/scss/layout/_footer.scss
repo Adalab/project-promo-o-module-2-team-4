@@ -2,6 +2,10 @@
   border-top: 1px solid #d8d8d8;
   background-color: white;
   height: 110px;
+  @include tablet {
+    height: 60px;
+  }
+
   width: 100%;
   @include columnCentered;
 
