@@ -1,10 +1,5 @@
 .body {
-  width: 100%;
-
-  margin-bottom: 110px;
-  @include tablet {
-    margin-bottom: 60px;
-  }
+  height: 100vh;
 }
 
 .main {
@@ -13,6 +8,8 @@
   @include tablet {
     display: flex;
     flex-direction: row-reverse;
+    height: 100vh;
+    padding: auto;
   }
 }
 
@@ -39,5 +36,5 @@
 }
 
 .collapse .js_collapsible {
-	display: none;
+  display: none;
 }
