@@ -74,3 +74,4 @@ mailInput.addEventListener("keyup", handleUserInput);
 phoneInput.addEventListener("keyup", handleUserInput);
 linkedinInput.addEventListener("keyup", handleUserInput);
 githubInput.addEventListener("keyup", handleUserInput);
+
