@@ -36,35 +36,36 @@ userInfo.github = githubInput.value;
 //Obtenemos el texto del input
 
 function getInputData(allInputs) {
-	const userInfo = {};
-	userInfo.name = nameInput.value;
-	userInfo.job = jobInput.value;
-	userInfo.mail = mailInput.value;
-	userInfo.phone = phoneInput.value;
-	userInfo.linkedin = linkedinInput.value;
-	userInfo.github = githubInput.value;
-	return userInfo;
+  const userInfo = {};
+  userInfo.name = nameInput.value;
+  userInfo.job = jobInput.value;
+  userInfo.mail = mailInput.value;
+  userInfo.phone = phoneInput.value;
+  userInfo.linkedin = linkedinInput.value;
+  userInfo.github = githubInput.value;
+  return userInfo;
 }
 
 // Lo pintamos en la tarjeta de Preview(HTML)
 function updatePreview(userInfo) {
-	// if (userInfo.name === "") {
-	// 	namePreview.innerHTML = "Nombre Apellidos";
-	// } else if (userInfo.job === "") {
-	// 	jobPreview.innerHTML = "Front-end developer";
-	// } else {
-	namePreview.innerHTML = userInfo.name;
-	jobPreview.innerHTML = userInfo.job;
-	mailPreview.href = `mailto:${userInfo.mail}`;
-	phonePreview.href = `tel:${userInfo.phone}`;
-	linkedinPreview.href = userInfo.linkedin;
-	githubPreview.href = userInfo.github;
+  if (userInfo.name === "") {
+    namePreview.innerHTML = "Nombre Apellidos";
+  } else if (userInfo.job === "") {
+    jobPreview.innerHTML = "Front-end developer";
+  } else {
+    namePreview.innerHTML = userInfo.name;
+    jobPreview.innerHTML = userInfo.job;
+    mailPreview.href = `mailto:${userInfo.mail}`;
+    phonePreview.href = `tel:${userInfo.phone}`;
+    linkedinPreview.href = userInfo.linkedin;
+    githubPreview.href = userInfo.github;
+  }
 }
 
 // función que las agrupa
 function handleUserInput(event) {
-	const userInfo = getInputData();
-	updatePreview(userInfo);
+  const userInfo = getInputData();
+  updatePreview(userInfo);
 }
 
 // Escuchamos el evento del teclado
