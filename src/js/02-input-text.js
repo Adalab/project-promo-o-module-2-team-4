@@ -53,12 +53,13 @@ function updatePreview(userInfo) {
 	} else if (userInfo.job === "") {
 		jobPreview.innerHTML = "Front-end developer";
 	} else {
-	namePreview.innerHTML = userInfo.name;
-	jobPreview.innerHTML = userInfo.job;
-	mailPreview.href = `mailto:${userInfo.mail}`;
-	phonePreview.href = `tel:${userInfo.phone}`;
-	linkedinPreview.href = userInfo.linkedin;
-	githubPreview.href = userInfo.github;
+		namePreview.innerHTML = userInfo.name;
+		jobPreview.innerHTML = userInfo.job;
+		mailPreview.href = `mailto:${userInfo.mail}`;
+		phonePreview.href = `tel:${userInfo.phone}`;
+		linkedinPreview.href = userInfo.linkedin;
+		githubPreview.href = userInfo.github;
+	}
 }
 
 // función que las agrupa
