@@ -48,11 +48,12 @@ function getInputData(allInputs) {
 
 // Lo pintamos en la tarjeta de Preview(HTML)
 function updatePreview(userInfo) {
-  /* if (userInfo.name === "") {
-    namePreview.innerHTML = "Nombre Apellidos";
-  } else if (userInfo.job === "") {
-    jobPreview.innerHTML = "Front-end developer";
-  } else { */
+  // if (userInfo.name === "") {
+  // 	namePreview.innerHTML = "Nombre Apellidos";
+  // } else if (userInfo.job === "") {
+  // 	jobPreview.innerHTML = "Front-end developer";
+  // } else {
+
   namePreview.innerHTML = userInfo.name;
   jobPreview.innerHTML = userInfo.job;
   mailPreview.href = `mailto:${userInfo.mail}`;
