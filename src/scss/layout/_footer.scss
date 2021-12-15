@@ -5,7 +5,7 @@
   @include tablet {
     height: 60px;
   }
-  
+
   width: 100%;
   @include columnCentered;
 
@@ -39,5 +39,5 @@
 }
 
 .landingFooter {
-	margin-top: 0px;
+  margin-top: 0px;
 }

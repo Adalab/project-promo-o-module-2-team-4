@@ -36,14 +36,14 @@ userInfo.github = githubInput.value;
 //Obtenemos el texto del input
 
 function getInputData(allInputs) {
-	const userInfo = {};
-	userInfo.name = nameInput.value;
-	userInfo.job = jobInput.value;
-	userInfo.mail = mailInput.value;
-	userInfo.phone = phoneInput.value;
-	userInfo.linkedin = linkedinInput.value;
-	userInfo.github = githubInput.value;
-	return userInfo;
+  const userInfo = {};
+  userInfo.name = nameInput.value;
+  userInfo.job = jobInput.value;
+  userInfo.mail = mailInput.value;
+  userInfo.phone = phoneInput.value;
+  userInfo.linkedin = linkedinInput.value;
+  userInfo.github = githubInput.value;
+  return userInfo;
 }
 
 // Lo pintamos en la tarjeta de Preview(HTML)
@@ -64,8 +64,8 @@ function updatePreview(userInfo) {
 
 // función que las agrupa
 function handleUserInput(event) {
-	const userInfo = getInputData();
-	updatePreview(userInfo);
+  const userInfo = getInputData();
+  updatePreview(userInfo);
 }
 
 // Escuchamos el evento del teclado
@@ -75,3 +75,4 @@ mailInput.addEventListener("keyup", handleUserInput);
 phoneInput.addEventListener("keyup", handleUserInput);
 linkedinInput.addEventListener("keyup", handleUserInput);
 githubInput.addEventListener("keyup", handleUserInput);
+
