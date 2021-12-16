@@ -25,11 +25,17 @@
 			name="job"
 			required
 		/>
-		<label class="form__label" for="image">Imagen de perfil</label>
+		<p class="form__label">Imagen de perfil</p>
 		<div class="form__label--wrapper">
-			<div class="button">Añadir imagen</div>
-			<div class="imgPreview"></div>
+			<label for="photo" class="button">Añadir imagen</label>
+			<div class="imgPreview js__profile-preview"></div>
 		</div>
+		<input
+			type="file"
+			class="hidden js__profile-upload-btn"
+			name="photo"
+			id="photo"
+		/>
 
 		<label class="form__label" for="emailAdress">Email</label>
 		<input
