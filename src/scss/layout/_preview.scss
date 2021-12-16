@@ -12,6 +12,7 @@
     align-items: center;
     margin: 20px 40px 20px 0;
     border-radius: 6px;
+    min-height: calc(100vh - 154px);
   }
   &__btn {
     display: block;
