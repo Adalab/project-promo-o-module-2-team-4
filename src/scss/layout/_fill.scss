@@ -41,6 +41,9 @@
         box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
       }
       & .imgPreview {
+        background-image: url();
+        background-size: cover;
+        background-position: center center;
         width: 30px;
         height: 30px;
         margin-left: 20px;
@@ -48,4 +51,7 @@
       }
     }
   }
+}
+.hidden {
+  display: none;
 }
