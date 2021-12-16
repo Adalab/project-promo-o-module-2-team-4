@@ -1,19 +1,25 @@
+.centeredLanding {
+  @include columnCentered; 
+}
+
 .landingMain {
   @include columnCentered;
   background-color: #f5f5f5;
   min-height: calc(100vh - 127px);
   @include tablet {
-    min-height: calc(100vh - 60px);
+  min-height: calc(100vh - 60px);
   }
 }
 .landingMain__logo {
   width: 250px;
   height: 63px;
-  margin: 95px auto 35px;
+  margin-bottom: 35px;
+  margin-left: auto;
+  margin-right: auto;
   @include tablet {
     width: 420px;
     height: 100px;
-    margin: 350px auto 35px;
+    margin-bottom: 35px;
   }
 }
 
