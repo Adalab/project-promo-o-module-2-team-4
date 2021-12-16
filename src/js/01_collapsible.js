@@ -12,12 +12,39 @@ function handlerClickLegend(event) {
 
 function rotateArrow(event) {
   event.currentTarget.parentNode.classList.toggle("rotateArrow");
+  if (event.currentTarget === legendShare) {
+    legendFill.parentNode.classList.add("rotateArrow");
+    legendDesign.parentNode.classList.add("rotateArrow");
+  }
+  else if (event.currentTarget === legendFill) {
+    legendShare.parentNode.classList.add("rotateArrow");
+    legendDesign.parentNode.classList.add("rotateArrow");
+  }
+  else {
+    legendShare.parentNode.classList.add("rotateArrow");
+    legendFill.parentNode.classList.add("rotateArrow");
+  }
 }
 
 function collapseContent(event) {
   event.currentTarget.parentNode.classList.toggle("collapse");
+  if (event.currentTarget === legendShare) {
+    legendFill.parentNode.classList.add("collapse");
+    legendDesign.parentNode.classList.add("collapse");
+  }
+  else if (event.currentTarget === legendFill) {
+    legendShare.parentNode.classList.add("collapse");
+    legendDesign.parentNode.classList.add("collapse");
+  }
+  else {
+    legendShare.parentNode.classList.add("collapse");
+    legendFill.parentNode.classList.add("collapse");
+  }
 }
+
+
 
 legendShare.addEventListener("click", handlerClickLegend);
 legendFill.addEventListener("click", handlerClickLegend);
 legendDesign.addEventListener("click", handlerClickLegend);
+
