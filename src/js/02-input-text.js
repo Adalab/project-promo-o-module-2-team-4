@@ -27,7 +27,7 @@ const data = {
   phone: "",
   linkedin: "",
   github: "",
-  palette: "",
+  palette: 1,
 };
 
 // funció que recoge el texto del usuario y lo asigna a cada input, guardándolo en el objeto
