@@ -64,6 +64,7 @@ function renderUserValue() {
 	phonePreview.href = `tel:${data.phone}`;
 	linkedinPreview.href = data.linkedin;
 	githubPreview.href = data.github;
+
 }
 
 // función que agrupa
