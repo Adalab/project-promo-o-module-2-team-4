@@ -15,63 +15,65 @@ const phoneInput = document.querySelector(".js-form__input--phone");
 const linkedinInput = document.querySelector(".js-form__input--linkedin");
 const githubInput = document.querySelector(".js-form__input--github");
 
-// objeto con todos los inputs
-const allInputs = {};
-nameInput.value = "";
-jobInput.value = "";
-mailInput.value = "";
-phoneInput.value = "";
-linkedinInput.value = "";
-githubInput.value = "";
+const allInputs = document.querySelectorAll(".input");
 
-// objeto con todos los valores;
-const userInfo = {};
-userInfo.name = nameInput.value;
-userInfo.job = jobInput.value;
-userInfo.mail = mailInput.value;
-userInfo.phone = phoneInput.value;
-userInfo.linkedin = linkedinInput.value;
-userInfo.github = githubInput.value;
+// objeto con todos los inputs;
+const data = {
+	full_name: "",
+	job: "",
+	email: "",
+	phone: "",
+	linkedin: "",
+	github: "",
+};
 
-//Obtenemos el texto del input
+// funció que recoge el texto del usuario y lo asigna a cada input, guardándolo en el objeto
+function handleWriteInput(event) {
+	const userInput = event.currentTarget.name;
+	const userValue = event.currentTarget.value;
 
-function getInputData(allInputs) {
-  const userInfo = {};
-  userInfo.name = nameInput.value;
-  userInfo.job = jobInput.value;
-  userInfo.mail = mailInput.value;
-  userInfo.phone = phoneInput.value;
-  userInfo.linkedin = linkedinInput.value;
-  userInfo.github = githubInput.value;
-  return userInfo;
+	if (userInput === "full_name") {
+		data.full_name = userValue;
+	} else if (userInput === "job") {
+		data.job = userValue;
+	} else if (userInput === "email") {
+		data.email = userValue;
+	} else if (userInput === "phone") {
+		data.phone = userValue;
+	} else if (userInput === "linkedin") {
+		data.linkedin = userValue;
+	} else if (userInput === "github") {
+		data.github = userValue;
+	}
 }
 
-// Lo pintamos en la tarjeta de Preview(HTML)
-function updatePreview(userInfo) {
-  // if (userInfo.name === "") {
-  // 	namePreview.innerHTML = "Nombre Apellidos";
-  // } else if (userInfo.job === "") {
-  // 	jobPreview.innerHTML = "Front-end developer";
-  // } else {
+// Pintamos el texto que asignamos al objeto en la tarjeta de Preview(HTML)
+function renderUserValue() {
+	if (data.full_name === "") {
+		namePreview.innerHTML = "Nombre Apellidos";
+	} else {
+		namePreview.innerHTML = data.full_name;
+	}
+	if (data.job === "") {
+		jobPreview.innerHTML = "Front-end developer";
+	} else {
+		jobPreview.innerHTML = data.job;
+	}
 
-  namePreview.innerHTML = userInfo.name;
-  jobPreview.innerHTML = userInfo.job;
-  mailPreview.href = `mailto:${userInfo.mail}`;
-  phonePreview.href = `tel:${userInfo.phone}`;
-  linkedinPreview.href = userInfo.linkedin;
-  githubPreview.href = userInfo.github;
+	mailPreview.href = `mailto:${data.email}`;
+	phonePreview.href = `tel:${data.phone}`;
+	linkedinPreview.href = data.linkedin;
+	githubPreview.href = data.github;
 }
 
-// función que las agrupa
+// función que agrupa
 function handleUserInput(event) {
-  const userInfo = getInputData();
-  updatePreview(userInfo);
+	handleWriteInput(event);
+	renderUserValue();
 }
 
 // Escuchamos el evento del teclado
-nameInput.addEventListener("keyup", handleUserInput);
-jobInput.addEventListener("keyup", handleUserInput);
-mailInput.addEventListener("keyup", handleUserInput);
-phoneInput.addEventListener("keyup", handleUserInput);
-linkedinInput.addEventListener("keyup", handleUserInput);
-githubInput.addEventListener("keyup", handleUserInput);
+
+for (const eachInput of allInputs) {
+	eachInput.addEventListener("keyup", handleUserInput);
+}
