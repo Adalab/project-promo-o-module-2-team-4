@@ -16,7 +16,7 @@
     margin-bottom: auto;
     @include tablet {
       margin-top: auto;
-    margin-bottom: auto;
+      margin-bottom: auto;
     }
   }
 
@@ -25,7 +25,6 @@
     height: 40px;
     margin-top: auto;
     margin-bottom: auto;
-  
   }
   @include tablet {
     display: flex;
