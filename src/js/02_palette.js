@@ -17,7 +17,7 @@ function handlePaletteClick(event) {
     //const paletteValue = palette.value; Creo que no es current target, que paletteValue se encuentra en la constante palette (.jr-radio) aunque sigue sin funcionarme
     if (paletteValue === 1) {
 
-        preview.classList.add("palette-1"); //También dudo de si las clases están bien...
+        preview.classList.add("palette-1"); //También dudo de si las clases están bien...y de si hay que remove primero y add después, al menos en el siguiente if
         preview.classList.remove("palette-2");
         preview.classList.remove("palette-3");
 
