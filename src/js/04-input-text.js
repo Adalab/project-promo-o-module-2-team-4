@@ -40,9 +40,14 @@ function handleWriteInput(event) {
   } else if (userInput === "github") {
     data.github = userValue;
   }
-  // else if (userInput === "palette") {
-  //   data.palette = userValue;
-  // }
+}
+
+function handleClickUserInput(event) {
+  const userInput = event.currentTarget.name;
+  const userValue = event.currentTarget.value;
+  if (userInput === "palette") {
+    data.palette = userValue;
+  }
 }
 
 console.log(data.palette);
@@ -75,4 +80,5 @@ function handleUserInput(event) {
 
 for (const eachInput of allInputs) {
   eachInput.addEventListener("keyup", handleUserInput);
+  eachInput.addEventListener("click", handleClickUserInput);
 }
