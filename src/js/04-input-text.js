@@ -7,14 +7,6 @@ const phonePreview = document.querySelector(".js-preview__phone");
 const mailPreview = document.querySelector(".js-preview__mail");
 const linkedinPreview = document.querySelector(".js-preview__linkedin");
 const githubPreview = document.querySelector(".js-preview__github");
-const photoPreview = document.querySelector(".js__profile-preview");
-
-// const nameInput = document.querySelector(".js-form__input--name");
-// const jobInput = document.querySelector(".js-form__input--job");
-// const mailInput = document.querySelector(".js-form__input--mail");
-// const phoneInput = document.querySelector(".js-form__input--phone");
-// const linkedinInput = document.querySelector(".js-form__input--linkedin");
-// const githubInput = document.querySelector(".js-form__input--github");
 
 const allInputs = document.querySelectorAll(".input");
 
@@ -27,7 +19,7 @@ const data = {
   phone: "",
   linkedin: "",
   github: "",
-  palette: 1,
+  palette: "",
 };
 
 // funció que recoge el texto del usuario y lo asigna a cada input, guardándolo en el objeto
@@ -48,8 +40,12 @@ function handleWriteInput(event) {
   } else if (userInput === "github") {
     data.github = userValue;
   }
+  // else if (userInput === "palette") {
+  //   data.palette = userValue;
+  // }
 }
 
+console.log(data.palette);
 // Pintamos el texto que asignamos al objeto en la tarjeta de Preview(HTML)
 function renderUserValue() {
   if (data.name === "") {
