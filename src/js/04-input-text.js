@@ -20,71 +20,65 @@ const allInputs = document.querySelectorAll(".input");
 
 // objeto con todos los inputs;
 const data = {
-  name: "",
-  job: "",
-  photo: "",
-  email: "",
-  phone: "",
-  linkedin: "",
-  github: "",
-  palette: 1,
+	name: "",
+	job: "",
+	photo: "",
+	email: "",
+	phone: "",
+	linkedin: "",
+	github: "",
+	palette: "",
 };
 
 // funció que recoge el texto del usuario y lo asigna a cada input, guardándolo en el objeto
 function handleWriteInput(event) {
-  const userInput = event.currentTarget.name;
-  const userValue = event.currentTarget.value;
+	const userInput = event.currentTarget.name;
+	const userValue = event.currentTarget.value;
 
-  if (userInput === "name") {
-    data.name = userValue;
-  } else if (userInput === "job") {
-    data.job = userValue;
-  } else if (userInput === "email") {
-    data.email = userValue;
-  } else if (userInput === "phone") {
-    data.phone = userValue;
-  } else if (userInput === "linkedin") {
-    data.linkedin = userValue;
-  } else if (userInput === "github") {
-    data.github = userValue;
-  }
+	if (userInput === "name") {
+		data.name = userValue;
+	} else if (userInput === "job") {
+		data.job = userValue;
+	} else if (userInput === "email") {
+		data.email = userValue;
+	} else if (userInput === "phone") {
+		data.phone = userValue;
+	} else if (userInput === "linkedin") {
+		data.linkedin = userValue;
+	} else if (userInput === "github") {
+		data.github = userValue;
+	} else if (userInput === "palette") {
+		data.palette = parseInt(userValue);
+	}
 }
 
 // Pintamos el texto que asignamos al objeto en la tarjeta de Preview(HTML)
 function renderUserValue() {
-  if (data.name === "") {
-    namePreview.innerHTML = "Nombre Apellidos";
-  } else {
-    namePreview.innerHTML = data.name;
-  }
-  if (data.job === "") {
-    jobPreview.innerHTML = "Front-end developer";
-  } else {
-    jobPreview.innerHTML = data.job;
-  }
+	if (data.name === "") {
+		namePreview.innerHTML = "Nombre Apellidos";
+	} else {
+		namePreview.innerHTML = data.name;
+	}
+	if (data.job === "") {
+		jobPreview.innerHTML = "Front-end developer";
+	} else {
+		jobPreview.innerHTML = data.job;
+	}
 
-<<<<<<< HEAD:src/js/04-input-text.js
 	mailPreview.href = `mailto:${data.email}`;
 	phonePreview.href = `tel:${data.phone}`;
 	linkedinPreview.href = data.linkedin;
 	githubPreview.href = data.github;
-
-=======
-  mailPreview.href = `mailto:${data.email}`;
-  phonePreview.href = `tel:${data.phone}`;
-  linkedinPreview.href = data.linkedin;
-  githubPreview.href = data.github;
->>>>>>> da0a5e397bbbe0066cb9fdb5bef02e1f2c17f078:src/js/02-input-text.js
 }
 
 // función que agrupa
 function handleUserInput(event) {
-  handleWriteInput(event);
-  renderUserValue();
+	handleWriteInput(event);
+	renderUserValue();
 }
 
 // Escuchamos el evento del teclado
 
 for (const eachInput of allInputs) {
-  eachInput.addEventListener("keyup", handleUserInput);
+	eachInput.addEventListener("keyup", handleUserInput);
 }
