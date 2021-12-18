@@ -63,18 +63,10 @@ function renderUserValue() {
     jobPreview.innerHTML = data.job;
   }
 
-<<<<<<< HEAD:src/js/04-input-text.js
-	mailPreview.href = `mailto:${data.email}`;
-	phonePreview.href = `tel:${data.phone}`;
-	linkedinPreview.href = data.linkedin;
-	githubPreview.href = data.github;
-
-=======
   mailPreview.href = `mailto:${data.email}`;
   phonePreview.href = `tel:${data.phone}`;
   linkedinPreview.href = data.linkedin;
   githubPreview.href = data.github;
->>>>>>> da0a5e397bbbe0066cb9fdb5bef02e1f2c17f078:src/js/02-input-text.js
 }
 
 // función que agrupa
