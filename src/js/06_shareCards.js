@@ -23,3 +23,6 @@ function shareCard() {
   removeCollapse();
   changeColor();
 }
+
+
+
