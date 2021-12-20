@@ -9,17 +9,15 @@ function resetForm(event) {
   event.preventDefault();
   for (const eachInput of allInputs) {
     if (eachInput.name === "palette") {
-      if (eachInput.id === "color_blue"){
+      if (eachInput.id === "color_blue") {
         eachInput.checked = true;
-      }
-      else { 
+      } else {
         eachInput.checked = false;
       }
-    }
-    else {
+    } else {
       eachInput.value = "";
     }
-    
+
     namePreview.innerHTML = "Nombre Apellido";
     jobPreview.innerHTML = "Front-end developer";
     phonePreview.href = "";
@@ -34,10 +32,13 @@ function resetForm(event) {
       shareResult.classList.add("collapseShare");
       shareBtn.classList.remove("greyBtn");
     }
-      if (preview.classList.contains("palette-2") || preview.classList.contains("palette-3")) {
-    preview.classList.remove("palette-2");
-    preview.classList.remove("palette-3");
-    preview.classList.add("palette-1");
-      }
+    if (
+      preview.classList.contains("palette-2") ||
+      preview.classList.contains("palette-3")
+    ) {
+      preview.classList.remove("palette-2");
+      preview.classList.remove("palette-3");
+      preview.classList.add("palette-1");
+    }
   }
 }
