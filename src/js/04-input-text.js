@@ -22,7 +22,7 @@ const data = {
 	palette: "",
 };
 
-// funció que recoge el texto del usuario y lo asigna a cada input, guardándolo en el objeto
+// función que recoge el texto del usuario y lo asigna a cada input, guardándolo en el objeto
 function handleWriteInput(event) {
 	const userInput = event.currentTarget.name;
 	const userValue = event.currentTarget.value;
@@ -79,6 +79,8 @@ function handleUserInput(event) {
 }
 
 // Escuchamos el evento del teclado
+
+// todos podrían ser "change" en vez de "keyup" y "click"
 
 for (const eachInput of allInputs) {
 	eachInput.addEventListener("keyup", handleUserInput);
