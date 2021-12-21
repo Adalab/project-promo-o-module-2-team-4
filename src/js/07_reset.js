@@ -41,4 +41,5 @@ function resetForm(event) {
       preview.classList.add("palette-1");
     }
   }
+  localStorage.setItem("userData", "{}");
 }

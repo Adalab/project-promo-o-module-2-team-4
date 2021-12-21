@@ -12,70 +12,75 @@ const allInputs = document.querySelectorAll(".input");
 
 // objeto con todos los inputs;
 const data = {
-	name: "",
-	job: "",
-	photo: "",
-	email: "",
-	phone: "",
-	linkedin: "",
-	github: "",
-	palette: "",
+  name: "",
+  job: "",
+  photo: "",
+  email: "",
+  phone: "",
+  linkedin: "",
+  github: "",
+  palette: "",
 };
 
 // función que recoge el texto del usuario y lo asigna a cada input, guardándolo en el objeto
 function handleWriteInput(event) {
-	const userInput = event.currentTarget.name;
-	const userValue = event.currentTarget.value;
-
-	// if (userInput === "name") {
-	// 	data.name = userValue;
-	// } else if (userInput === "job") {
-	// 	data.job = userValue;
-	// } else if (userInput === "email") {
-	// 	data.email = userValue;
-	// } else if (userInput === "phone") {
-	// 	data.phone = userValue;
-	// } else if (userInput === "linkedin") {
-	// 	data.linkedin = userValue;
-	// } else if (userInput === "github") {
-	// 	data.github = userValue;
-	// } else if (userInput === "palette") {
-	// 	data.palette = userValue;
-	// }
-
-	data[userInput] = userValue;
+  const userInput = event.currentTarget.name;
+  const userValue = event.currentTarget.value;
+  data[userInput] = userValue;
+  localStorage.setItem("userData", JSON.stringify(data));
 }
 
-// function handleClickUserInput(event) {
-//   const userInput = event.currentTarget.name;
-//   const userValue = event.currentTarget.value;
+let savedName = {};
 
-// }
+function getStoredData() {
+  savedName = JSON.parse(localStorage.getItem("userData"));
+  console.log(savedName);
+  for (const item in savedName) {
+    if (item === "photo") {
+      profileImage.style.backgroundImage = `url(${savedName[item]})`;
+      profilePreview.style.backgroundImage = `url(${savedName[item]})`;
+    } else if (item === "palette") {
+      const numberPalette = savedName[item];
+      //const radiobutton = document.querySelector(
+      //  `input[name='palette'][value="${numberPalette}"]`
+      //);
+      const input = document.querySelector(`.js-palette-${numberPalette}`);
+      input.checked = true;
+    } else {
+      const input = document.querySelector(`#${item}`);
+      input.value = savedName[item];
+    }
+  }
+}
+
+if (localStorage.getItem("userData") !== null) {
+  getStoredData();
+}
 
 console.log(data.palette);
 // Pintamos el texto que asignamos al objeto en la tarjeta de Preview(HTML)
 function renderUserValue() {
-	if (data.name === "") {
-		namePreview.innerHTML = "Nombre Apellidos";
-	} else {
-		namePreview.innerHTML = data.name;
-	}
-	if (data.job === "") {
-		jobPreview.innerHTML = "Front-end developer";
-	} else {
-		jobPreview.innerHTML = data.job;
-	}
+  if (data.name === "") {
+    namePreview.innerHTML = "Nombre Apellido";
+  } else {
+    namePreview.innerHTML = data.name;
+  }
+  if (data.job === "") {
+    jobPreview.innerHTML = "Front-end developer";
+  } else {
+    jobPreview.innerHTML = data.job;
+  }
 
-	mailPreview.href = `mailto:${data.email}`;
-	phonePreview.href = `tel:${data.phone}`;
-	linkedinPreview.href = data.linkedin;
-	githubPreview.href = data.github;
+  mailPreview.href = `mailto:${data.email}`;
+  phonePreview.href = `tel:${data.phone}`;
+  linkedinPreview.href = data.linkedin;
+  githubPreview.href = data.github;
 }
 
 // función que agrupa
 function handleUserInput(event) {
-	handleWriteInput(event);
-	renderUserValue();
+  handleWriteInput(event);
+  renderUserValue();
 }
 
 // Escuchamos el evento del teclado
@@ -83,6 +88,6 @@ function handleUserInput(event) {
 // todos podrían ser "change" en vez de "keyup" y "click"
 
 for (const eachInput of allInputs) {
-	eachInput.addEventListener("keyup", handleUserInput);
-	eachInput.addEventListener("click", handleUserInput);
+  eachInput.addEventListener("keyup", handleUserInput);
+  eachInput.addEventListener("click", handleUserInput);
 }
