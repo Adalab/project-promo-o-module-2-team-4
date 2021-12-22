@@ -39,23 +39,22 @@
 
     <main class="main">
       <section class="preview">
-        <button class="preview__btn" type="reset">
+        <button class="preview__btn js-resetBtn" type="reset">
         	<i class="far fa-trash-alt"></i>
         	Reset
         </button>
 
-
-        <article class="preview__article">
+        <article class="preview__article palette-1">
         	<div class="preview__article--container">
-        		<div class="preview__article--rectangle"></div>
+        		<div class="preview__article--rectangle js-rectangle"></div>
         		<h2 class="preview__article--name js-preview__name">Nombre Apellido</h2>
-        		<h3 class="preview__article--job js-preview__job">Font-end developer</h3>
+        		<h3 class="preview__article--job js-preview__job">Front-end developer</h3>
         	</div>
-        	<div class="preview__article--img"></div>
+        	<div class="preview__article--img js__profile-image"></div>
         	<div class="container">
         		<a class="js-preview__phone" href="tel:" alt="Ir a móvil" target="_blank">
         			<div class="container-icon">
-        				<i class="fas fa-mobile-alt"></i>
+        				<i class="fas fa-mobile-alt contact-icon"></i>
         			</div>
         		</a>
         		<a
@@ -65,7 +64,7 @@
         			target="_blank"
         		>
         			<div class="container-icon">
-        				<i class="far fa-envelope"></i>
+        				<i class="far fa-envelope contact-icon"></i>
         			</div>
         		</a>
         		<a
@@ -75,7 +74,7 @@
         			target="_blank"
         		>
         			<div class="container-icon">
-        				<i class="fab fa-linkedin-in"></i>
+        				<i class="fab fa-linkedin-in contact-icon"></i>
         			</div>
         		</a>
         		<a
@@ -85,118 +84,142 @@
         			target="_blank"
         		>
         			<div class="container-icon">
-        				<i class="fab fa-github-alt"></i>
+        				<i class="fab fa-github-alt contact-icon"></i>
         			</div>
         		</a>
         	</div>
         </article>
 
       </section>
-      <form class="dashboard">
+      <form class="dashboard js-reset">
         <fieldset class="fieldset rotateArrow">
-        	<legend class="legend js_legendDesign" style="cursor: pointer" title="Pulsa para desplegar">
-	          <div class="legend__iconTitle">
-	            <div><i class="far fa-object-ungroup item--icon"></i></div>
-	            <h2 class="legend__iconTitle--mainTitle">Diseña</h2>
-	          </div>
-	          <div><i class="fas fa-chevron-down" style="color: #54585a"></i></div>
-	        </legend>
+          <legend class="legend js_legendDesign" style="cursor: pointer" title="Pulsa para desplegar">
+            <div class="legend__iconTitle">
+              <div><i class="far fa-object-ungroup item--icon"></i></div>
+              <h2 class="legend__iconTitle--mainTitle">Diseña</h2>
+            </div>
+            <div><i class="fas fa-chevron-down" style="color: #54585a"></i></div>
+          </legend>
 
-        	<div class="design js_collapsible">
-        		<label class="design__label">Colores</label>
-        		<ul>
-        			<li class="color_blue">
-        				<input class="radio" type="radio" value="1" id="color_blue" name="palette" />
-        				<div class="color_blue--dark"></div>
-        				<div class="color_blue--medium"></div>
-        				<div class="color_blue--light"></div>
-        			</li>
-        			<li class="color_red">
-        				<input class="radio" type="radio" value="2" id="color_red" name="palette" />
-        				<div class="color_red--dark"></div>
-        				<div class="color_red--medium"></div>
-        				<div class="color_red--light"></div>
-        			</li>
-        			<li class="color_grey">
-        				<input class="radio" type="radio" value="3" id="color_grey" name="palette" />
-        				<div class="color_grey--dark"></div>
-        				<div class="color_grey--medium"></div>
-        				<div class="color_grey--light"></div>
-        			</li>
-        		</ul>
-        	</div>
+          <div class="design js_collapsible">
+            <label class="design__label">Colores</label>
+            <ul>
+              <li class="color_blue">
+                <input
+                  class="radio js-radio js-palette-1 input"
+                  type="radio"
+                  value="1"
+                  id="color_blue"
+                  name="palette"
+                />
+                <div class="color_blue--dark"></div>
+                <div class="color_blue--medium"></div>
+                <div class="color_blue--light"></div>
+              </li>
+              <li class="color_red">
+                <input
+                  class="radio js-radio js-palette-2 input"
+                  type="radio"
+                  value="2"
+                  id="color_red"
+                  name="palette"
+                />
+                <div class="color_red--dark"></div>
+                <div class="color_red--medium"></div>
+                <div class="color_red--light"></div>
+              </li>
+              <li class="color_grey">
+                <input
+                  class="radio js-radio js-palette-3 input"
+                  type="radio"
+                  value="3"
+                  id="color_grey"
+                  name="palette"
+                />
+                <div class="color_grey--dark"></div>
+                <div class="color_grey--medium"></div>
+                <div class="color_grey--light"></div>
+              </li>
+            </ul>
+          </div>
         </fieldset>
 
 
         <fieldset class="fieldset collapse">
-        	<legend class="legend js_legendFill" style="cursor: pointer" title="Pulsa para desplegar">
-	          <div class="legend__iconTitle">
-	            <div><i class="far fa-keyboard item--icon"></i></div>
-	            <h2 class="legend__iconTitle--mainTitle">Rellena</h2>
-	          </div>
-	          <div><i class="fas fa-chevron-down" style="color: #54585a"></i></div>
-	        </legend>
+          <legend class="legend js_legendFill" style="cursor: pointer" title="Pulsa para desplegar">
+            <div class="legend__iconTitle">
+              <div><i class="far fa-keyboard item--icon"></i></div>
+              <h2 class="legend__iconTitle--mainTitle">Rellena</h2>
+            </div>
+            <div><i class="fas fa-chevron-down" style="color: #54585a"></i></div>
+          </legend>
 
-        	<div class="form js_collapsible">
-        		<label class="form__label" for="fullName">Nombre completo</label>
-        		<input
-        			class="form__label--input js-form__input--name"
-        			placeholder="Ej:Mari Puri López"
-        			type="text"
-        			id="fullName"
-        			name="fullName"
-        			required
-        		/>
-        		<label class="form__label" for="job">Puesto</label>
-        		<input
-        			class="form__label--input js-form__input--job"
-        			placeholder="Ej:Master and Commander"
-        			type="text"
-        			id="job"
-        			name="job"
-        			required
-        		/>
-        		<label class="form__label" for="image">Imagen de perfil</label>
-        		<div class="form__label--wrapper">
-        			<div class="button">Añadir imagen</div>
-        			<div class="imgPreview"></div>
-        		</div>
+          <div class="form js_collapsible">
+            <label class="form__label" for="name">Nombre completo</label>
+            <input
+              class="input form__label--input js-form__input--name"
+              placeholder="Ej:Mari Puri López"
+              type="text"
+              id="name"
+              name="name"
+              required
+            />
+            <label class="form__label" for="job">Puesto</label>
+            <input
+              class="input form__label--input js-form__input--job"
+              placeholder="Ej:Master and Commander"
+              type="text"
+              id="job"
+              name="job"
+              required
+            />
+            <p class="form__label">Imagen de perfil</p>
+            <div class="form__label--wrapper">
+              <label for="photo" class="button">Añadir imagen</label>
+              <div class="imgPreview js__profile-preview"></div>
+            </div>
+            <input
+              type="file"
+              class="hidden js__profile-upload-btn input"
+              name="photo"
+              id="photo"
+            />
 
-        		<label class="form__label" for="emailAdress">Email</label>
-        		<input
-        			class="form__label--input js-form__input--mail"
-        			placeholder="Ej:maripuri@lamaster.com"
-        			type="email"
-        			id="emailAdress"
-        			name="emailAdress"
-        			required
-        		/>
-        		<label class="form__label" for="phone">Teléfono</label>
-        		<input
-        			class="form__label--input js-form__input--phone"
-        			placeholder="Ej:+34 611661234"
-        			type="text"
-        			id="phone"
-        			name="phone"
-        			required
-        		/>
-        		<label class="form__label" for="linkedIn">LinkedIn</label>
-        		<input
-        			class="form__label--input js-form__input--linkedin"
-        			placeholder="Ej:linkedin.com/es/lamari.master"
-        			type="text"
-        			id="linkedIn"
-        			name="linkedIn"
-        		/>
-        		<label class="form__label" for="gitHub">Github</label>
-        		<input
-        			class="form__label--input js-form__input--github"
-        			placeholder="Ej:@lamari"
-        			type="text"
-        			id="gitHub"
-        			name="gitHub"
-        		/>
-        	</div>
+            <label class="form__label" for="emailAdress">Email</label>
+            <input
+              class="input form__label--input js-form__input--mail"
+              placeholder="Ej:maripuri@lamaster.com"
+              type="email"
+              id="email"
+              name="email"
+              required
+            />
+            <label class="form__label" for="phone">Teléfono</label>
+            <input
+              class="input form__label--input js-form__input--phone"
+              placeholder="Ej:+34 611661234"
+              type="text"
+              id="phone"
+              name="phone"
+              required
+            />
+            <label class="form__label" for="linkedIn">LinkedIn</label>
+            <input
+              class="input form__label--input js-form__input--linkedin"
+              placeholder="Ej:linkedin.com/es/lamari.master"
+              type="text"
+              id="linkedin"
+              name="linkedin"
+            />
+            <label class="form__label" for="gitHub">Github</label>
+            <input
+              class="input form__label--input js-form__input--github"
+              placeholder="Ej:@lamari"
+              type="text"
+              id="github"
+              name="github"
+            />
+          </div>
         </fieldset>
 
 
@@ -209,21 +232,27 @@
             <div><i class="fas fa-chevron-down" style="color: #54585a"></i></div>
           </legend>
           <div class="share__container js_collapsible">
-          <button class="share__create_btn--off">
+
+          <button class="share__create_btn--off js_shareBtn">
             <i class="far fa-address-card"></i>
             Crear tarjeta
           </button>
-          <section class="share__result">
+
+
+
+          <section class="share__result collapseShare">
             <p class="share__result--title">La tarjeta ha sido creada:</p>
-            <a href="" class="share__result--link"
-              >https://awesome-profile-card.com?id=A456DF0001</a
+            <a href="" class="share__result--link js_share_link" target="_blank"
+              ></a
             >
             <!--Este texto habrá que eliminarlo, es el link generado. Lo pongo para comprobar los estilos-->
             </a>
-            <a href="https://adalab.es/" class="share__result--btn" target="_blank">
+            <a href="https://twitter.com/intent/tweet?text=" class="share__result--btn js-twitter" target="_blank ">
               <i class="fab fa-twitter"></i>
               <p>Compartir en twitter</p>
             </a>
+           
+           
           </section>
         </div>
         </fieldset>
