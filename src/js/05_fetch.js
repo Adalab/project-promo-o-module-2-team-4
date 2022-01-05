@@ -21,10 +21,10 @@ function handleClickCreate(event) {
         generatedLink.innerHTML = data.cardURL;
         generatedLink.href = data.cardURL;
         twitterBtn.href = `https://twitter.com/intent/tweet?text=Esta es mi tarjeta de Awesome Cards&url=${data.cardURL}`;
-      } else {
-        console.error("Error");
-      }
-    });
+      } 
+    })
+    .catch((error) => console.error(error));
+
 }
 
 btnCreate.addEventListener("click", handleClickCreate);

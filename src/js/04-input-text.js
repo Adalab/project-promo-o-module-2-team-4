@@ -19,7 +19,7 @@ const data = {
   phone: "",
   linkedin: "",
   github: "",
-  palette: "",
+  palette: "1",
 };
 
 // función que recoge el texto del usuario y lo asigna a cada input, guardándolo en el objeto
@@ -36,19 +36,22 @@ function getStoredData() {
   savedName = JSON.parse(localStorage.getItem("userData"));
   console.log(savedName);
   for (const item in savedName) {
-    if (item === "photo") {
-      profileImage.style.backgroundImage = `url(${savedName[item]})`;
-      profilePreview.style.backgroundImage = `url(${savedName[item]})`;
-    } else if (item === "palette") {
-      const numberPalette = savedName[item];
-      //const radiobutton = document.querySelector(
-      //  `input[name='palette'][value="${numberPalette}"]`
-      //);
-      const input = document.querySelector(`.js-palette-${numberPalette}`);
-      input.checked = true;
-    } else {
-      const input = document.querySelector(`#${item}`);
-      input.value = savedName[item];
+    if (savedName[item]) {
+      data[item] = savedName[item];
+      if (item === "photo") {
+        profileImage.style.backgroundImage = `url(${savedName[item]})`;
+        profilePreview.style.backgroundImage = `url(${savedName[item]})`;
+      } else if (item === "palette") {
+        const numberPalette = savedName[item];
+        //const radiobutton = document.querySelector(
+        //  `input[name='palette'][value="${numberPalette}"]`
+        //);
+        const input = document.querySelector(`.js-palette-${numberPalette}`);
+        input.checked = true;
+      } else {
+        const input = document.querySelector(`#${item}`);
+        input.value = savedName[item];
+      }
     }
   }
 }
