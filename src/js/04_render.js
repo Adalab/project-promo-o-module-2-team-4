@@ -71,8 +71,8 @@ function renderUserValue() {
   }
   mailPreview.href = `mailto:${data.email}`;
   phonePreview.href = `tel:${data.phone}`;
-  linkedinPreview.href = data.linkedin;
-  githubPreview.href = data.github;
+  linkedinPreview.href = `https://www.linkedin.com/in/${data.linkedin}`;
+  githubPreview.href = `https://github.com/${data.github}`;
 }
 
 //Función para añadir o quitar clases de paleta a preview y asignar el número de paleta al objeto data
