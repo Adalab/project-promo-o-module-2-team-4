@@ -1,15 +1,7 @@
 'use strict';
 
-// constante y listener del botón reset
-const resetBtn = document.querySelector('.js-resetBtn');
-resetBtn.addEventListener('click', resetForm);
-
-// función para resetear el formulario
-function resetForm(event) {
-  event.preventDefault();
-  const shareBtn = document.querySelector('.js_shareBtn');
-  disableBtnCreate(shareBtn);
-  localStorage.clear('userData');
+//Funciones para resetear el formulario, el local storage, el objeto data, y la preview
+function clearDataObject(){
   data.name = '';
   data.job = '';
   data.photo = '';
@@ -18,7 +10,9 @@ function resetForm(event) {
   data.linkedin = '';
   data.github = '';
   data.palette = '';
-  renderUserValue();
+}
+
+function resetInputValues(){
   for (const input of allInputs) {
     if (input.name === 'palette') {
       if (input.id === 'color_blue') {
@@ -30,6 +24,9 @@ function resetForm(event) {
       input.value = '';
     }
   }
+}
+
+function resetPreviewCard(){
   phonePreview.href = '';
   mailPreview.href = '';
   linkedinPreview.href = '';
@@ -42,3 +39,16 @@ function resetForm(event) {
   preview.classList.remove('palette-3');
   preview.classList.add('palette-1');
 }
+
+function resetForm(event) {
+  event.preventDefault();
+  localStorage.clear('userData');
+  shareResult.classList.add('hidden');
+  disableBtnCreate(shareBtn);
+  clearDataObject();
+  renderUserValue();
+  resetInputValues();
+  resetPreviewCard();
+}
+
+resetBtn.addEventListener('click', resetForm);
