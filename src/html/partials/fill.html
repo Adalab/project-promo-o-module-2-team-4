@@ -7,25 +7,25 @@
   ></include>
 
   <div class="form js_collapsible">
-    <label class="form__label" for="name">Nombre completo</label>
+    <label class="form__label" for="name">Nombre completo*</label>
     <input
       class="input form__label--input js-form__input--name"
-      placeholder="Ej:Mari Puri López"
+      placeholder="Ej: Mari Puri López"
       type="text"
       id="name"
       name="name"
       required
     />
-    <label class="form__label" for="job">Puesto</label>
+    <label class="form__label" for="job">Puesto*</label>
     <input
       class="input form__label--input js-form__input--job"
-      placeholder="Ej:Master and Commander"
+      placeholder="Ej: Master and Commander"
       type="text"
       id="job"
       name="job"
       required
     />
-    <p class="form__label">Imagen de perfil</p>
+    <p class="form__label">Imagen de perfil*</p>
     <div class="form__label--wrapper">
       <label for="photo" class="button">Añadir imagen</label>
       <div class="imgPreview js__profile-preview"></div>
@@ -37,10 +37,10 @@
       id="photo"
     />
 
-    <label class="form__label" for="emailAdress">Email</label>
+    <label class="form__label" for="emailAdress">Email*</label>
     <input
       class="input form__label--input js-form__input--mail"
-      placeholder="Ej:maripuri@lamaster.com"
+      placeholder="Ej: maripuri@lamaster.com"
       type="email"
       id="email"
       name="email"
@@ -49,27 +49,30 @@
     <label class="form__label" for="phone">Teléfono</label>
     <input
       class="input form__label--input js-form__input--phone"
-      placeholder="Ej:+34 611661234"
+      placeholder="Ej: +34 611661234"
       type="text"
       id="phone"
       name="phone"
       required
     />
-    <label class="form__label" for="linkedIn">LinkedIn</label>
+    <label class="form__label" for="linkedIn"
+      >Nombre de usuario en LinkedIn*</label
+    >
     <input
       class="input form__label--input js-form__input--linkedin"
-      placeholder="Ej:linkedin.com/es/lamari.master"
+      placeholder="Ej: lamari.master"
       type="text"
       id="linkedin"
       name="linkedin"
     />
-    <label class="form__label" for="gitHub">Github</label>
+    <label class="form__label" for="gitHub">Nombre de usuario en Github*</label>
     <input
       class="input form__label--input js-form__input--github"
-      placeholder="Ej:@lamari"
+      placeholder="Ej: lamari"
       type="text"
       id="github"
       name="github"
     />
+    <p class="form__mandatory">* Campos obligarotios</p>
   </div>
 </fieldset>

@@ -58,7 +58,7 @@
   display: none;
 }
 
-.share__create_btn--off {
+.share__create_btn--on {
   box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
   width: 199px;
   height: 50px;
@@ -69,8 +69,18 @@
   text-transform: uppercase;
   color: #fff;
   margin: 30px 0;
+  cursor: pointer;
 }
 
-.greyBtn {
+.share__create_btn--off {
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
+  width: 199px;
+  height: 50px;
   background-color: #d5d5d5;
+  border-radius: 12px;
+  font-family: $mainfont;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 30px 0;
 }

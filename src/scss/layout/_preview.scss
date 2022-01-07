@@ -12,7 +12,6 @@
     align-items: center;
     margin: 20px 40px 20px 0;
     border-radius: 6px;
-    min-height: calc(100vh - 154px);
   }
   &__btn {
     display: block;
@@ -29,6 +28,7 @@
     justify-content: space-between;
     padding: 0 12px;
     background: transparent;
+    cursor: pointer;
     @include tablet {
       transform: translateX(-107%);
     }
@@ -70,7 +70,7 @@
       padding: 0 14px 5px 0;
     }
     &--img {
-      background-image: url("../images/img_card.jpg");
+      background-image: url('../images/img_card.jpg');
       height: 200px;
       width: 100%;
       background-size: cover;

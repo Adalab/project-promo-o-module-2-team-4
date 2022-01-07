@@ -1,45 +1,44 @@
-"use strict";
+'use strict';
 
 // constante y listener del botón reset
-const resetBtn = document.querySelector(".js-resetBtn");
-resetBtn.addEventListener("click", resetForm);
+const resetBtn = document.querySelector('.js-resetBtn');
+resetBtn.addEventListener('click', resetForm);
 
 // función para resetear el formulario
 function resetForm(event) {
   event.preventDefault();
-  for (const eachInput of allInputs) {
-    if (eachInput.name === "palette") {
-      if (eachInput.id === "color_blue") {
-        eachInput.checked = true;
+  const shareBtn = document.querySelector('.js_shareBtn');
+  disableBtnCreate(shareBtn);
+  localStorage.clear('userData');
+  data.name = '';
+  data.job = '';
+  data.photo = '';
+  data.email = '';
+  data.phone = '';
+  data.linkedin = '';
+  data.github = '';
+  data.palette = '';
+  renderUserValue();
+  for (const input of allInputs) {
+    if (input.name === 'palette') {
+      if (input.id === 'color_blue') {
+        input.checked = true;
       } else {
-        eachInput.checked = false;
+        input.checked = false;
       }
     } else {
-      eachInput.value = "";
-    }
-
-    namePreview.innerHTML = "Nombre Apellido";
-    jobPreview.innerHTML = "Front-end developer";
-    phonePreview.href = "";
-    mailPreview.href = "";
-    linkedinPreview.href = "";
-    githubPreview.href = "";
-    profileImage.style.backgroundImage = "";
-    profilePreview.style.backgroundImage = "";
-    generatedLink.innerHTML = "";
-    generatedLink.href = "";
-    if (shareBtn.classList.contains("greyBtn")) {
-      shareResult.classList.add("collapseShare");
-      shareBtn.classList.remove("greyBtn");
-    }
-    if (
-      preview.classList.contains("palette-2") ||
-      preview.classList.contains("palette-3")
-    ) {
-      preview.classList.remove("palette-2");
-      preview.classList.remove("palette-3");
-      preview.classList.add("palette-1");
+      input.value = '';
     }
   }
-  localStorage.setItem("userData", "{}");
+  phonePreview.href = '';
+  mailPreview.href = '';
+  linkedinPreview.href = '';
+  githubPreview.href = '';
+  profileImage.style.backgroundImage = '';
+  profilePreview.style.backgroundImage = '';
+  generatedLink.innerHTML = '';
+  generatedLink.href = '';
+  preview.classList.remove('palette-2');
+  preview.classList.remove('palette-3');
+  preview.classList.add('palette-1');
 }
