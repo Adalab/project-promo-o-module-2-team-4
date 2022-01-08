@@ -44,3 +44,28 @@
 	align-items: center;
 	margin-bottom: 20px;
 }
+
+//Mixins para los errores
+@mixin error() {
+	position: absolute;
+        font-family: $mainfont;
+        background-color: $green;
+        color: $mainback;
+        padding: 10px;
+        border-radius: 10px;
+		max-width: 280px;
+        box-shadow: 5px 5px 10px rgba($color: #000000, $alpha: .3);
+        @include tablet {
+            max-width: unset;
+        }
+}
+
+@mixin errorDecoration(){
+	width: 20px;
+            height: 20px;
+            transform: rotate(45deg);
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            background-color: $green;
+}

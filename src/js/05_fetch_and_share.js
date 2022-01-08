@@ -3,6 +3,8 @@
 //Función para que aparezca la parte de compartir la tarjeta
 function removeCollapse() {
   shareResult.classList.remove('collapseShare');
+  shareResult.classList.remove('hidden');
+
 }
 
 function shareCard() {
@@ -57,7 +59,5 @@ function checkCompletedData() {
     data.palette !== ''
   ) {
     enableBtnCrate(shareBtn);
-  } else {
-    disableBtnCreate(shareBtn);
-  }
+   }
 }

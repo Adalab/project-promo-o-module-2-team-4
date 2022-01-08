@@ -15,11 +15,7 @@ function clearDataObject(){
 function resetInputValues(){
   for (const input of allInputs) {
     if (input.name === 'palette') {
-      if (input.id === 'color_blue') {
-        input.checked = true;
-      } else {
         input.checked = false;
-      }
     } else {
       input.value = '';
     }
@@ -40,6 +36,15 @@ function resetPreviewCard(){
   preview.classList.add('palette-1');
 }
 
+function collapseFillAndShare(){
+  legendDesign.parentNode.classList.remove('collapse');
+  legendFill.parentNode.classList.add('collapse');
+  legendFill.parentNode.classList.remove('rotateArrow');
+  legendShare.parentNode.classList.add('collapse');
+  legendShare.parentNode.classList.remove('rotateArrow');
+
+}
+
 function resetForm(event) {
   event.preventDefault();
   localStorage.clear('userData');
@@ -49,6 +54,7 @@ function resetForm(event) {
   renderUserValue();
   resetInputValues();
   resetPreviewCard();
+  collapseFillAndShare();
 }
 
 resetBtn.addEventListener('click', resetForm);

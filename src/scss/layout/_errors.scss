@@ -1,141 +1,49 @@
 .error{
     &__palette{
-        position: absolute;
-        font-family: $mainfont;
-        background-color: $green;
-        color: $mainback;
-        padding: 10px;
-        border-radius: 10px;
-        transform: translate(20px, 40px);
-        max-width: 280px;
-        box-shadow: 5px 5px 10px rgba($color: #000000, $alpha: .3);
-        @include tablet {
-            max-width: unset;
-        }
-        &--decoration{
-            width: 20px;
-            height: 20px;
-            transform: rotate(45deg);
-            position: absolute;
-            top: -10px;
-            left: 20px;
-            background-color: $green;
-        }
+      transform: translate(20px, 40px);
+      @include error;
+      &--decoration{
+        @include errorDecoration;
+      }
+      
     }
     &__empty{
-        position: absolute;
-        font-family: $mainfont;
-        background-color: $green;
-        color: $mainback;
-        padding: 10px;
-        border-radius: 10px;
         transform: translate(20px, 36px);
-        max-width: 280px;
-        box-shadow: 5px 5px 10px rgba($color: #000000, $alpha: .3);
-        @include tablet {
-            max-width: unset;
-        }
+        @include error;
         &--decoration{
-            width: 20px;
-            height: 20px;
-            transform: rotate(45deg);
-            position: absolute;
-            top: -10px;
-            left: 20px;
-            background-color: $green;
+          @include errorDecoration;
         }
     }
   &__email{
-    position: absolute;
-    font-family: $mainfont;
-    background-color: $green;
-    color: $mainback;
-    padding: 10px;
-    border-radius: 10px;
+    
     transform: translate(0px, 346px);
-    box-shadow: 5px 5px 10px rgba($color: #000000, $alpha: .3);
-    max-width: 280px;
-    @include tablet {
-        max-width: unset;
-    }
-    &--decoration{
-        width: 20px;
-        height: 20px;
-        transform: rotate(45deg);
-        position: absolute;
-        top: -10px;
-        left: 20px;
-        background-color: $green;
-    }
+    @include error;
+      &--decoration{
+        @include errorDecoration;
+      }
 }
 &__phone{
-    position: absolute;
-    font-family: $mainfont;
-    background-color: $green;
-    color: $mainback;
-    padding: 10px;
-    border-radius: 10px;
+   
     transform: translate(0px, 424px);
-    box-shadow: 5px 5px 10px rgba($color: #000000, $alpha: .3);
-    max-width: 280px;
-    @include tablet {
-        max-width: unset;
-    }
-    &--decoration{
-        width: 20px;
-        height: 20px;
-        transform: rotate(45deg);
-        position: absolute;
-        top: -10px;
-        left: 20px;
-        background-color: $green;
-}
+    @include error;
+      &--decoration{
+        @include errorDecoration;
+      }
 }
 &__linkedin{
-    position: absolute;
-    font-family: $mainfont;
-    background-color: $green;
-    color: $mainback;
-    padding: 10px;
-    border-radius: 10px;
+   
     transform: translate(0px, 500px);
-    box-shadow: 5px 5px 10px rgba($color: #000000, $alpha: .3);
-    max-width: 280px;
-    z-index: 999;
-    @include tablet {
-        max-width: unset;
-    }
+    @include error;
     &--decoration{
-        width: 20px;
-        height: 20px;
-        transform: rotate(45deg);
-        position: absolute;
-        top: -10px;
-        left: 20px;
-        background-color: $green;
-}
+      @include errorDecoration;
+    }
 }
 &__github{
-    position: absolute;
-    font-family: $mainfont;
-    background-color: $green;
-    color: $mainback;
-    padding: 10px;
-    border-radius: 10px;
+   
     transform: translate(0px, 577px);
-    box-shadow: 5px 5px 10px rgba($color: #000000, $alpha: .3);
-    max-width: 280px;
-    @include tablet {
-        max-width: unset;
-    }
-    &--decoration{
-        width: 20px;
-        height: 20px;
-        transform: rotate(45deg);
-        position: absolute;
-        top: -10px;
-        left: 20px;
-        background-color: $green;
-}
+    @include error;
+      &--decoration{
+        @include errorDecoration;
+      }
 }}
 

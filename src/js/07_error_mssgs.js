@@ -160,24 +160,39 @@ function removeError(className) {
 }
 
 function removeEmptyError() {
-   removeError('.js-error-empty');
- }
+  removeError('.js-error-empty');
+}
+
+function removeAllErrors() {
+  const allErrors = document.querySelectorAll('.js-error');
+  for (const eachError of allErrors) {
+    eachError.remove();
+  }
+}
 
 function handleClickShare() {
   findFormErrors();
 }
 
-function handleChangeInput(){
-  const allErrors = document.querySelectorAll('.js-error');
-  for (const eachError of allErrors) {
-  eachError.remove();
+function handleClickInput(ev) {
+  removeAllErrors();
+  if (ev.currentTarget.parentNode.classList.contains('color')) {
+    legendDesign.parentNode.classList.remove('collapse');
+    legendFill.parentNode.classList.add('collapse');
+  } else if (ev.currentTarget.parentNode.classList.contains('form')) {
+    legendDesign.parentNode.classList.add('collapse');
+    legendFill.parentNode.classList.remove('collapse');
   }
 }
 
-legendShare.addEventListener('click', handleClickShare);
-
-for (const input of allInputs){
-  input.addEventListener("click", handleChangeInput);
+function handleClickReset() {
+  removeAllErrors();
 }
 
-resetBtn.addEventListener("click", handleChangeInput);
+legendShare.addEventListener('click', handleClickShare);
+resetBtn.addEventListener('click', handleClickReset);
+
+for (const input of allInputs) {
+  input.addEventListener('click', handleClickInput);
+}
+
