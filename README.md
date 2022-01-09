@@ -35,6 +35,7 @@ Estas tres secciones son colapsables, es decir, al abrir una las otras dos se ci
 **3. Previsualización (_preview_) y botón reset**
 
 En este bloque se muestran:
+
 3.1 _Preview_  
  La tarjeta que se actualiza en el mismo momento en que el usuario introduce sus datos. Todos los datos se almacenan de forma local, de forma que,git add si sale de la página o se recarga, no es necesario introducir los datos nuevamente.
 
