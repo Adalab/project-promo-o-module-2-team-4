@@ -4,7 +4,7 @@
 
 En este proyecto se nos pide desarrollar una página web dinámica aplicando los lenguajes de maquetación **HTML** y **CSS** y el lenguaje de programación **JavaScript.**
 Se trata de una **aplicación de ordenador** para crear tarjetas de visita y compartirlas a través de las RRSS (en este caso sólo se va a compartir a través de Twitter).
-Este proyecto se completó en tres semanas por un grupo de cinco desarrolladoras junior.
+Este proyecto se completó en **tres semanas por un grupo de cinco desarrolladoras junior.**
 
 ## Elementos de la página web
 
@@ -14,6 +14,7 @@ Para el desarrollo de la Landing Page se han utilizado únicamente los lenguajes
 En el botón de "Comenzar" se ha incluido una transición que marca la acción de hacer click sobre el botón. Esta acción nos conduce al siguiente elemento.
 
 **2. Parte central o aplicación**
+
 Esta es la parte dinámica de la página, es decir, en donde se ha aplicado el lenguaje de programación JavaScript que permite que la página sea interactiva. Se divide en tres secciones. A la derecha de estas secciones se encuetra el bloque de _preview_ que veremos en el punto 3.
 
 2.1 Diseña
